@@ -47,18 +47,21 @@ free-apis-backend/
 ## Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/akuma392/free-apis.git
    cd free-apis-backend
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Setup environment variables**
    Create a `.env` file in the root directory:
+
    ```
    MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/database
    ```
@@ -72,6 +75,7 @@ free-apis-backend/
 ## API Endpoints
 
 ### Get All APIs / Search
+
 - **GET** `/api/category`
 - **Query Parameters:**
   - `q` - Search term for API name (optional)
@@ -79,11 +83,13 @@ free-apis-backend/
   - `https` or `HTTPS` - Filter by HTTPS support: `true` or `false` (optional)
 
 **Example:**
+
 ```
 GET /api/category?q=color&auth=apiKey&https=true
 ```
 
 **Response:**
+
 ```json
 {
   "filters": {
@@ -108,19 +114,23 @@ GET /api/category?q=color&auth=apiKey&https=true
 ```
 
 ### Get APIs by Category
+
 - **GET** `/api/category/:slug`
 - **Parameters:**
   - `slug` - Category slug (e.g., `art-and-design`, `tracking`)
 
 **Example:**
+
 ```
 GET /api/category/art-and-design
 ```
 
 ### Get Random API
+
 - **GET** `/api/category/random`
 
 **Response:**
+
 ```json
 {
   "Number": 5,
@@ -134,9 +144,11 @@ GET /api/category/art-and-design
 ```
 
 ### Get All Categories
+
 - **GET** `/api/lists`
 
 **Response:**
+
 ```json
 [
   {
@@ -155,26 +167,31 @@ GET /api/category/art-and-design
 ## Usage Examples
 
 ### Search for APIs containing "color"
+
 ```bash
 curl "http://localhost:3000/api/category?q=color"
 ```
 
 ### Find HTTPS-enabled APIs without authentication
+
 ```bash
 curl "http://localhost:3000/api/category?auth=&https=true"
 ```
 
 ### Get APIs in the Art & Design category
+
 ```bash
 curl "http://localhost:3000/api/category/art-and-design"
 ```
 
 ### Find APIs with OAuth authentication
+
 ```bash
 curl "http://localhost:3000/api/category?auth=OAuth"
 ```
 
 ### Combine multiple filters
+
 ```bash
 curl "http://localhost:3000/api/category?q=api&auth=apiKey&https=true"
 ```
@@ -182,6 +199,7 @@ curl "http://localhost:3000/api/category?q=api&auth=apiKey&https=true"
 ## Database Schema
 
 ### Category Collection
+
 ```javascript
 {
   API: String,           // API name
@@ -195,6 +213,7 @@ curl "http://localhost:3000/api/category?q=api&auth=apiKey&https=true"
 ```
 
 ### List Collection
+
 ```javascript
 {
   name: String,          // Category name (e.g., "Art & Design")
@@ -207,6 +226,7 @@ curl "http://localhost:3000/api/category?q=api&auth=apiKey&https=true"
 - `MONGODB_URI` - MongoDB connection string (required)
 
 **Example .env file:**
+
 ```
 MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/collections
 ```
@@ -214,6 +234,7 @@ MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/collections
 ## CORS Configuration
 
 CORS is enabled for all origins. Modify in `app.js` if needed:
+
 ```javascript
 app.use(cors()); // Allow all origins
 ```
@@ -221,6 +242,7 @@ app.use(cors()); // Allow all origins
 ## Error Handling
 
 The API returns appropriate HTTP status codes:
+
 - `200` - Success
 - `400` - Bad request (missing required parameters)
 - `404` - Not found (category doesn't exist)
