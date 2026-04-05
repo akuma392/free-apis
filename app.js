@@ -14,11 +14,14 @@ var listsRouter = require("./routes/lists");
 
 mongoose.connect(
   process.env.MONGODB_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  (err) => {
-    console.log(err ? err : "Connected to database");
-  }
-);
+  { useNewUrlParser: true, useUnifiedTopology: true }
+)
+  .then(() => {
+    console.log("Connected to database");
+  })
+  .catch((err) => {
+    console.error("Database connection error:", err);
+  });
 
 var app = express();
 
@@ -43,7 +46,7 @@ app.use(function (req, res, next) {
 app.use(function (err, req, res, next) {
   const status = err.status || 500;
   const message = err.message;
-  
+
   res.status(status).json({
     error: {
       status: status,
