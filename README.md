@@ -2,6 +2,11 @@
 
 A comprehensive REST API backend that provides a curated collection of free APIs for front-end applications. Built with Express.js and MongoDB, this project makes it easy to discover, filter, and access publicly available APIs.
 
+## 🚀 Live Deployment
+
+This project is deployed on **Vercel** and is live at:
+**[https://free-apis-abhi.vercel.app/](https://free-apis-abhi.vercel.app/)**
+
 ## Features
 
 - **Search APIs** - Find APIs by name with case-insensitive search
@@ -263,6 +268,15 @@ The API returns appropriate HTTP status codes:
 - Pagination for large result sets
 - API documentation generation
 - Rate limiting
+
+## Data Sources
+
+The API dataset has been curated and imported from the following open-source repositories:
+
+1. **[public-apis/public-apis](https://github.com/public-apis/public-apis)** - A comprehensive list of free APIs for use in software and web development
+2. **[marcelscruz/public-apis](https://github.com/marcelscruz/public-apis)** - A curated list of free and open APIs
+
+All APIs in this backend have been sourced, verified, and organized from these two repositories. We're grateful to these projects for maintaining such extensive and well-documented API collections. For more information about specific APIs, credit, and usage guidelines, please visit the original repositories.
 
 ## Contributing
 
