@@ -46,7 +46,6 @@ free-apis-backend/
 ├── public/              # Static files
 ├── views/               # View templates
 ├── package.json         # Dependencies
-└── .env                 # Environment variables
 ```
 
 ## Installation
