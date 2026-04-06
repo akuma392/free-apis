@@ -5,7 +5,7 @@ var List = require("../models/List");
 router.get("/", async (req, res, next) => {
     try {
         let list = await List.find({});
-        res.status(200).json({count:list.length,list:list});
+        res.status(200).json({ count: list.length, list: list });
     } catch (error) {
         next(error);
     }
