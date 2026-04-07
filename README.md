@@ -245,7 +245,6 @@ app.use(cors()); // Allow all origins
 ## Error Handling
 
 The API returns appropriate HTTP status codes:
-
 - `200` - Success
 - `400` - Bad request (missing required parameters)
 - `404` - Not found (category doesn't exist)
