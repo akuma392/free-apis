@@ -8,7 +8,6 @@ This project is deployed on **Vercel** and is live at:
 **[https://free-apis-abhi.vercel.app/](https://free-apis-abhi.vercel.app/)**
 
 ## Features
-
 - **Search APIs** - Find APIs by name with case-insensitive search
 - **Filter by Category** - Browse APIs by category (Art & Design, Animals, Tracking, etc.)
 - **Filter by Authentication** - Find APIs based on auth type (None, API Key, OAuth)
