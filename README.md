@@ -1,6 +1,6 @@
 # Free APIs Backend
 
-A comprehensive REST API backend that provides a curated collection of free APIs for front-end applications. Built with Express.js and MongoDB, this project makes it easy to discover, filter, and access publicly available APIs.
+A comprehensive REST API backend that provides a curated collection of free APIs for front-end applications. Built with Express.js and MongoDB, this project makes it easy to discover, filter, sort, and access publicly available APIs.
 
 ## 🚀 Live Deployment
 
