@@ -3,7 +3,6 @@
 A comprehensive REST API backend that provides a curated collection of free APIs for front-end applications. Built with Express.js and MongoDB, this project makes it easy to discover, filter, sort, and access publicly available APIs.
 
 ## 🚀 Live Deployment
-
 This project is deployed on **Vercel** and is live at:
 **[https://free-apis-abhi.vercel.app/](https://free-apis-abhi.vercel.app/)**
 
