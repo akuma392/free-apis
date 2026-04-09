@@ -12,7 +12,7 @@ require("dotenv").config();
 var indexRouter = require("./routes/index");
 var categoryRouter = require("./routes/category");
 var listsRouter = require("./routes/lists");
-
+// mongodb
 mongoose.connect(
   process.env.MONGODB_URI,
   { useNewUrlParser: true, useUnifiedTopology: true }
